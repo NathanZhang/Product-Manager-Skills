@@ -105,6 +105,16 @@ Navigation is state-based (`st.session_state.view`). The `nav()` helper handles 
 - Phase radio selector lets users jump to any phase
 - Each phase: enter context → Run → output → Re-run or Continue to next phase
 
+**Multi-Turn interactions**
+**What:** Multi-turn conversational flows that gather context through sequential questioning and offer intelligent next-step recommendations.
+**Characteristics:**
+- Asks questions one at a time (or in small batches)
+- Uses answers to inform subsequent questions
+- Offers **enumerated, context-aware recommendations** for next steps
+- Allows user to select by number ("1", "2 & 4") or provide custom input
+- Adapts based on user choices
+
+
 ### System Prompt
 
 Each session uses the full `SKILL.md` body as the system prompt, with a short facilitation addendum for interactive skills:

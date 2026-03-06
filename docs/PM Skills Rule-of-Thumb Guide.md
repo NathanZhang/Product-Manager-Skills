@@ -60,6 +60,13 @@ Ask up to 3 clarifying questions when context is missing.
 2. Open `dist/skill-zips/`.
 3. Upload the ZIP in Claude Skills settings.
 
+### Default C: Local command runner (terminal-friendly)
+
+```bash
+./scripts/run-pm.sh skill user-story "Checkout improvements for returning users"
+./scripts/run-pm.sh command discover "Reduce onboarding drop-off for self-serve users"
+```
+
 ---
 
 ## Common Confusions (And Fixes)

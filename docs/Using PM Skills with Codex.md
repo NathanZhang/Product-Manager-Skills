@@ -26,6 +26,12 @@ Example:
 Using the skill at skills/prd-development/SKILL.md, create a PRD for a mobile onboarding redesign. Ask up to 3 clarifying questions first, then proceed.
 ```
 
+Command workflow example:
+
+```text
+Run commands/discover.md for this request: reduce onboarding drop-off for self-serve SMB users.
+```
+
 ### How to Apply Skill Types
 
 - **Component skills**: ask for a specific artifact (for example, user story, positioning statement, epic hypothesis).
@@ -36,6 +42,13 @@ Using the skill at skills/prd-development/SKILL.md, create a PRD for a mobile on
 
 ```text
 First use skills/problem-framing-canvas/SKILL.md to define the problem. Then apply skills/user-story/SKILL.md to write stories for the chosen solution.
+```
+
+Use local helper scripts for quick discovery and execution:
+
+```bash
+./scripts/find-a-command.sh --list-all
+./scripts/run-pm.sh command plan-roadmap "Q3-Q4 roadmap for enterprise reporting"
 ```
 
 ---

@@ -1,8 +1,69 @@
 # Product Manager Skills — Development Roadmap
 
-**Last Updated:** 2026-02-10
-**Status:** Phase 1 COMPLETE ✅ | Phase 2 COMPLETE ✅ | Phase 3 COMPLETE ✅ | Phase 4 COMPLETE ✅ | Phase 5 COMPLETE ✅ | Phase 6 COMPLETE ✅ | Phase 7 COMPLETE ✅ | Phase 8 IN PROGRESS 🚧
-**Version:** v0.4 (Released February 10, 2026)
+**Last Updated:** 2026-03-06
+**Status:** Phase 1 COMPLETE ✅ | Phase 2 COMPLETE ✅ | Phase 3 COMPLETE ✅ | Phase 4 COMPLETE ✅ | Phase 5 COMPLETE ✅ | Phase 6 COMPLETE ✅ | Phase 7 PLANNED ⏳
+**Version:** v0.6 (Released March 6, 2026)
+
+---
+
+## v0.6 Navigation + Commands Program (Phased)
+
+Goal: make this repo as easy to navigate and run as possible at 60+ skills, without introducing plugins.
+
+### Phase 1: Operating Model (Complete)
+- [x] Keep current architecture: `skills/<skill-name>/SKILL.md` remains the core library.
+- [x] Preserve local skill subtypes: `component`, `interactive`, `workflow`.
+- [x] Add command architecture as orchestration wrappers over existing skills.
+
+Exit criteria:
+- A `commands/` directory exists with command definitions that reference existing skills.
+
+### Phase 2: Navigation System (Complete)
+- [x] Add generated catalog artifacts for skills and commands.
+- [x] Add quick browse pages (`catalog/skills-by-type.md`, `catalog/commands.md`).
+- [x] Add command discovery script (`scripts/find-a-command.sh`).
+
+Exit criteria:
+- Users can browse by type and search skills/commands from the terminal.
+
+### Phase 3: Fast Onboarding (Complete)
+- [x] Add a single-entry quick-start guide (`START_HERE.md`).
+- [x] Add copy/paste "do this now" usage paths.
+- [x] Wire quick-start into the root README.
+
+Exit criteria:
+- A new user can run a skill or command in under 60 seconds.
+
+### Phase 4: Commands v1 (Complete)
+- [x] Create high-value commands for common PM outcomes (`discover`, `strategy`, `write-prd`, `plan-roadmap`, `prioritize`, `leadership-transition`).
+- [x] Ensure each command includes invocation guidance, workflow checkpoints, and next steps.
+- [x] Ensure each command references only local skills.
+
+Exit criteria:
+- Command files pass metadata/reference validation.
+
+### Phase 5: Tooling + Validation (Complete)
+- [x] Add command metadata validator (`scripts/check-command-metadata.py`).
+- [x] Add command-enabled launcher (`scripts/run-pm.sh`) for skill/command execution scaffolding.
+- [x] Add library-level test runner (`scripts/test-library.sh`) and catalog generator (`scripts/generate-catalog.py`).
+
+Exit criteria:
+- One command can validate skills + commands + generated catalogs.
+
+### Phase 6: Documentation Consolidation (Complete)
+- [x] Add README quick-start section for skills + commands.
+- [x] Extend platform-specific docs with command-first examples.
+- [x] Publish v0.6 release note after docs sweep.
+
+Exit criteria:
+- README + primary usage docs present one consistent flow.
+
+### Phase 7: Streamlit Command Mode (Planned)
+- [ ] Add command browsing/execution mode to Streamlit beta.
+- [ ] Show command step progress and per-step outputs.
+
+Exit criteria:
+- Streamlit users can run either a skill or a command intentionally.
 
 ---
 

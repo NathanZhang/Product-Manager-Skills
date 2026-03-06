@@ -55,11 +55,33 @@ claude "Run skills/discovery-process/SKILL.md for our enterprise customer churn 
 ```
 These orchestrate multiple phases. Claude will outline the process, then execute phase by phase.
 
+### Command Workflows (skills + orchestration)
+
+The repo also includes a `commands/` layer for fast multi-skill execution.
+
+```bash
+claude "Run commands/discover.md for reducing onboarding drop-off in self-serve SMB accounts"
+claude "Run commands/write-prd.md for mobile onboarding redesign"
+```
+
+Or use the local launcher:
+
+```bash
+./scripts/run-pm.sh command discover "Reduce onboarding drop-off in self-serve SMB accounts" --agent claude
+```
+
 ### Working with Multiple Skills
 
 Chain skills explicitly:
 ```bash
 claude "First use skills/problem-framing-canvas/SKILL.md to define the problem. Then apply skills/opportunity-solution-tree/SKILL.md to map solutions."
+```
+
+Discover available command wrappers:
+
+```bash
+./scripts/find-a-command.sh --list-all
+./scripts/find-a-command.sh --keyword roadmap
 ```
 
 ### Installing Skills Globally (Optional)

@@ -28,6 +28,12 @@ Example:
 Use skills/prioritization-advisor/SKILL.md from deanpeters/Product-Manager-Skills and guide me through choosing a framework for a B2B roadmap.
 ```
 
+Command-style example:
+
+```text
+Run commands/strategy.md from deanpeters/Product-Manager-Skills for: B2B analytics add-on for mid-market ecommerce brands.
+```
+
 ---
 
 ## Option 2: Build a Custom GPT with Skill Knowledge (Best for Reuse)

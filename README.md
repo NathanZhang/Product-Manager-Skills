@@ -1,6 +1,14 @@
 <a id="pmskills"></a>
 # Product Manager Skills
 
+![GitHub stars](https://img.shields.io/github/stars/deanpeters/Product-Manager-Skills?style=flat-square)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square)](https://github.com/deanpeters/Product-Manager-Skills/blob/main/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/deanpeters/Product-Manager-Skills/blob/main/CONTRIBUTING.md)
+[![Version](https://img.shields.io/badge/version-v0.6-blue?style=flat-square)](https://github.com/deanpeters/Product-Manager-Skills)
+![Skills](https://img.shields.io/badge/skills-46-informational?style=flat-square)
+![Commands](https://img.shields.io/badge/commands-6-informational?style=flat-square)
+![Streamlit Beta](https://img.shields.io/badge/streamlit-beta-orange?style=flat-square)
+
 ```text
 ╔════════════════════════════════════════════════════════════════════╗
 ║                                                                    ║
@@ -11,10 +19,10 @@
 ║   ██║     ██║ ╚═╝ ██║    ███████║██║  ██╗██║███████╗███████╗███████║
 ║   ╚═╝     ╚═╝     ╚═╝    ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝
 ║                                                                    ║
-║   46 battle-tested frameworks for AI agents                        ║
-║   Claude Code • Cowork • Codex • ChatGPT • Gemini                  ║
+║   46 battle-tested skills + 6 command workflows                    ║
+║   Claude Code • Cursor • Codex  • n8n • OpenClaw • and more ...    ║
 ║                                                                    ║
-║   v0.5 • Feb 27, 2026 • CC BY-NC-SA 4.0                            ║
+║   v0.6 • Mar 6, 2026 • CC BY-NC-SA 4.0                             ║
 ╚════════════════════════════════════════════════════════════════════╝
 ```
 
@@ -25,6 +33,21 @@ Frame problems, hunt opportunities, scaffold validation experiments, and kill ba
 ---
 
 ## 📣 Updates & Announcements
+
+### Mar 6, 2026 — v0.6 Navigation + Commands
+
+We added a command layer and fast navigation system while keeping skills as the source of truth.
+
+What shipped:
+- `START_HERE.md` for 60-second onboarding
+- `commands/` directory with reusable multi-skill workflows
+- `catalog/` generated indexes for quick browsing
+- New helper scripts: `run-pm.sh`, `find-a-command.sh`, `test-library.sh`, and `generate-catalog.py`
+- Command validation with `scripts/check-command-metadata.py`
+
+Release note draft: [`docs/announcements/2026-03-06-v0-6-navigation-commands.md`](docs/announcements/2026-03-06-v0-6-navigation-commands.md)
+
+---
 
 ### Feb 27, 2026 — v0.5 Streamlit (beta) Playground
 
@@ -100,7 +123,7 @@ Still rewriting PM prompts and getting generic AI output? I built a reusable PM 
 
 ## 🎯 What This Is
 
-**46 ready-to-use PM frameworks** that teach AI agents how to do product management work professionally—without you having to explain your process every time.
+**46 ready-to-use PM skills + reusable command workflows** that teach AI agents how to do product management work professionally—without you having to explain your process every time.
 
 Instead of saying *"Write a PRD"* and hoping for the best, the agent already knows:
 - ✅ How to structure a PRD
@@ -112,6 +135,41 @@ Instead of saying *"Write a PRD"* and hoping for the best, the agent already kno
 **Result:** You work faster, with better consistency, at a higher strategic level.
 
 **Works with:** Claude Code, Cowork, OpenAI Codex, ChatGPT, Gemini, and any AI agent that can read structured knowledge.
+
+---
+
+## ⚡ Start in 60 Seconds
+
+New here? Start with [`START_HERE.md`](START_HERE.md).
+
+```bash
+# Run a skill (artifact/analysis)
+./scripts/run-pm.sh skill prioritization-advisor "We have 12 requests and one sprint"
+
+# Run a command (multi-skill workflow)
+./scripts/run-pm.sh command discover "Reduce onboarding drop-off for self-serve users"
+```
+
+Need discovery first?
+
+```bash
+./scripts/find-a-skill.sh --keyword onboarding
+./scripts/find-a-command.sh --keyword roadmap
+```
+
+---
+
+## Why The Command Layer Helps
+
+Commands make using skills easier without replacing skills.
+
+- Skills stay deep and pedagogic: they are still the source of truth for frameworks and quality.
+- Commands remove stitching work: one command chains the right skills in the right order.
+- You start faster: less "which skill should I run first?" and fewer manual handoffs.
+- Outputs are more consistent: commands enforce checkpoints, then defer to skill-level rigor.
+- Teams onboard quicker: new users can run `/discover` or `/write-prd` and learn the skill system while shipping.
+
+In short: **skills provide expertise; commands provide momentum.**
 
 ---
 
@@ -154,8 +212,12 @@ Some skills include a `scripts/` folder with deterministic helpers for calculati
 - `scripts/add-a-skill.sh` - Content-first, AI-assisted generation from notes/frameworks.
 - `scripts/build-a-skill.sh` - Guided "build-a-bear" wizard that prompts section-by-section.
 - `scripts/find-a-skill.sh` - Search skills by name/type/keyword with ranked results.
+- `scripts/find-a-command.sh` - Search commands by name/keyword/used skills.
+- `scripts/run-pm.sh` - Fast runner for either a skill or a command.
 - `scripts/test-a-skill.sh` - Run strict conformance checks and optional smoke checks.
+- `scripts/test-library.sh` - Validate skills, commands, and regenerate catalogs.
 - `scripts/zip-a-skill.sh` - Build upload-ready `.zip` files by skill, type, or all skills.
+- `scripts/generate-catalog.py` - Regenerate skill/command navigation indexes.
 
 **What it does:**
 1. Analyzes your content and suggests skill types
@@ -174,8 +236,17 @@ Some skills include a `scripts/` folder with deterministic helpers for calculati
 # Find a skill
 ./scripts/find-a-skill.sh --keyword pricing --type interactive
 
+# Find a command
+./scripts/find-a-command.sh --keyword roadmap
+
+# Run a command workflow
+./scripts/run-pm.sh command write-prd "Mobile onboarding redesign"
+
 # Test one skill
 ./scripts/test-a-skill.sh --skill finance-based-pricing-advisor --smoke
+
+# Test full library surface
+./scripts/test-library.sh
 
 # Build Claude upload zip for one skill
 ./scripts/zip-a-skill.sh --skill finance-based-pricing-advisor
@@ -367,6 +438,18 @@ Detailed concept notes live in [`PLANS.md`](PLANS.md#future-skill-candidates).
 
 **Confused by setup options?** Start here: [PM Skills Rule-of-Thumb Guide](docs/PM%20Skills%20Rule-of-Thumb%20Guide.md).
 
+### Fastest Path (Local Repo)
+
+```bash
+# Skill mode
+./scripts/run-pm.sh skill user-story "Checkout improvements for returning customers"
+
+# Command mode
+./scripts/run-pm.sh command plan-roadmap "Q3-Q4 roadmap for enterprise reporting"
+```
+
+Command definitions live in [`commands/`](commands/README.md), and generated browse indexes live in [`catalog/`](catalog/README.md).
+
 ### With Claude Desktop or Claude.ai
 
 1. Open a conversation with Claude
@@ -402,6 +485,9 @@ Use GitHub app connections (formerly connectors), Custom GPT Knowledge uploads, 
 - **[Using PM Skills with Claude](docs/Using%20PM%20Skills%20with%20Claude.md)** — Claude Code usage plus GitHub ZIP upload steps for Claude Desktop/Web.
 - **[Using PM Skills with Codex](docs/Using%20PM%20Skills%20with%20Codex.md)** — Local workspace usage plus GitHub-connected Codex on ChatGPT.
 - **[Using PM Skills with ChatGPT](docs/Using%20PM%20Skills%20with%20ChatGPT.md)** — GitHub app connection, Custom GPT Knowledge setup, and Project-based usage.
+- **[Start Here](START_HERE.md)** — One-page "do this now" onboarding for skills and commands.
+- **[Commands](commands/README.md)** — Command format, command list, validation, and discovery.
+- **[Catalog Artifacts](catalog/README.md)** — Generated skill/command indexes for fast navigation.
 - **[PM Skills Rule-of-Thumb Guide](docs/PM%20Skills%20Rule-of-Thumb%20Guide.md)** — Non-technical setup choices (local repo vs ZIP vs app connections) in plain English.
 - **[Marketplace Strategy](MARKETPLACE_STRATEGY.md)** — PM-friendly strategy for distributing skills in marketplaces.
 - **[Marketplace Submission Runbook](docs/Marketplace%20Submission%20Runbook.md)** — Step-by-step submission workflow for non-technical teams.
@@ -555,6 +641,14 @@ See [LICENSE](LICENSE) for full details.
 - **Productside:** [Learn more about AI PM consulting](https://productside.com)
 
 ---
+
+**v0.6 — March 6, 2026**
+
+Highlights in this release:
+- Added `commands/` with reusable workflow wrappers over local skills (`discover`, `strategy`, `write-prd`, `plan-roadmap`, `prioritize`, `leadership-transition`)
+- Added `START_HERE.md` for 60-second onboarding
+- Added generated `catalog/` artifacts for fast skill and command navigation
+- Added tooling for discovery/validation/execution: `find-a-command.sh`, `run-pm.sh`, `check-command-metadata.py`, `test-library.sh`, `generate-catalog.py`
 
 **v0.5 — February 27, 2026**
 

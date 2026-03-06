@@ -2,6 +2,8 @@
 
 ## Project Structure & Module Organization
 - `skills/<skill-name>/SKILL.md` holds each skill. Skill folders use lowercase kebab-case names (e.g., `skills/user-story/SKILL.md`).
+- `commands/<command-name>.md` holds reusable orchestration commands that chain local skills.
+- `catalog/` holds generated indexes for fast browsing (`skills-by-type.md`, `commands.md`, and YAML indexes).
 - `research/` contains reference essays that inform skills.
 - `docs/` contains usage guides, including `docs/Using PM Skills with Codex.md`.
 - `app/` contains the Streamlit (beta) playground (`app/main.py`) and setup docs (`app/STREAMLIT_INTERFACE.md`).
@@ -12,6 +14,8 @@ This is a Markdown-first repository with no build system or automated tests.
 - `rg --files` lists all files quickly.
 - `rg "SKILL.md"` finds skill definitions.
 - `rg "skill-name"` verifies references before submitting.
+- `./scripts/find-a-command.sh --list-all` lists available workflow commands.
+- `./scripts/test-library.sh` validates skills + commands and regenerates catalogs.
 - `streamlit run app/main.py` launches the Streamlit (beta) skill playground.
 
 ## Coding Style & Naming Conventions
@@ -22,6 +26,16 @@ This is a Markdown-first repository with no build system or automated tests.
 - Ensure the skill folder name matches the frontmatter `name` exactly (lowercase kebab-case).
 - Use fenced code blocks with language tags for commands or templates.
 - Keep language concise and opinionated; avoid filler.
+
+### Interactive Skills
+**What:** Multi-turn conversational flows that gather context through sequential questioning and offer intelligent next-step recommendations.
+
+**Characteristics:**
+- Asks questions one at a time (or in small batches)
+- Uses answers to inform subsequent questions
+- Offers **enumerated, context-aware recommendations** for next steps
+- Allows user to select by number ("1", "2 & 4") or provide custom input
+- Adapts based on user choices
 
 ## Testing Guidelines
 No automated tests exist. Validate changes by:
