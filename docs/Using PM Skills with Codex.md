@@ -1,6 +1,10 @@
 # Using PM Skills with Codex
 
-Codex can apply these skills directly from your repo files. There are two practical paths:
+Codex can apply these skills directly from your repo files.
+
+If you are new to this repo, start with [`Using PM Skills 101.md`](Using%20PM%20Skills%20101.md) first.
+
+There are three practical paths:
 - Local workspace (Codex in your coding environment)
 - Codex on ChatGPT (`chatgpt.com/codex`) with GitHub connected
 - Skills marketplace install via `npx skills`

@@ -2,6 +2,13 @@
 
 This repo is a library of PM skill files designed for AI agents. Claude Code (CLI) and Claude Cowork (workspace) can both read these files and apply them as structured instructions.
 
+If you are new to this repo, start with [`Using PM Skills 101.md`](Using%20PM%20Skills%20101.md).
+
+If you want shorter PM-first guides by platform, use:
+- [`Using PM Skills with Claude Code.md`](Using%20PM%20Skills%20with%20Claude%20Code.md)
+- [`Using PM Skills with Claude Cowork.md`](Using%20PM%20Skills%20with%20Claude%20Cowork.md)
+- [`Using PM Skills with Claude Desktop.md`](Using%20PM%20Skills%20with%20Claude%20Desktop.md)
+
 For quick local experimentation before running in Claude, you can also use the Streamlit (beta) playground:
 
 ```bash

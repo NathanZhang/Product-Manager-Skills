@@ -2,6 +2,10 @@
 
 You can use this skills repo with ChatGPT in three ways, depending on how repeatable you want the setup.
 
+If you are new to this repo, start with [`Using PM Skills 101.md`](Using%20PM%20Skills%20101.md).
+
+If you specifically use the desktop app, see the PM-first guide: [`Using PM Skills with ChatGPT Desktop.md`](Using%20PM%20Skills%20with%20ChatGPT%20Desktop.md).
+
 If you want to test a skill locally first, use the Streamlit (beta) playground:
 
 ```bash

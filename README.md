@@ -4,7 +4,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/deanpeters/Product-Manager-Skills?style=flat-square)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square)](https://github.com/deanpeters/Product-Manager-Skills/blob/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/deanpeters/Product-Manager-Skills/blob/main/CONTRIBUTING.md)
-[![Version](https://img.shields.io/badge/version-v0.6-blue?style=flat-square)](https://github.com/deanpeters/Product-Manager-Skills)
+[![Version](https://img.shields.io/badge/version-v0.65-blue?style=flat-square)](https://github.com/deanpeters/Product-Manager-Skills)
 ![Skills](https://img.shields.io/badge/skills-46-informational?style=flat-square)
 ![Commands](https://img.shields.io/badge/commands-6-informational?style=flat-square)
 ![Streamlit Beta](https://img.shields.io/badge/streamlit-beta-orange?style=flat-square)
@@ -22,7 +22,7 @@
 ║   46 battle-tested skills + 6 command workflows                    ║
 ║   Claude Code • Cursor • Codex  • n8n • OpenClaw • and more ...    ║
 ║                                                                    ║
-║   v0.6 • Mar 6, 2026 • CC BY-NC-SA 4.0                             ║
+║   v0.65 • Mar 8, 2026 • CC BY-NC-SA 4.0                            ║
 ╚════════════════════════════════════════════════════════════════════╝
 ```
 
@@ -33,6 +33,26 @@ Frame problems, hunt opportunities, scaffold validation experiments, and kill ba
 ---
 
 ## 📣 Updates & Announcements
+
+### Mar 8, 2026 — v0.65 You Asked, We Listened: Setup + Integration Everywhere
+
+You asked, we listened. We took a moment to create comprehensive instructions on how to install, integrate, or otherwise use any one or all of these skills.
+
+What shipped:
+- `docs/Using PM Skills 101.md` as the complete beginner-first guide
+- `docs/Platform Guides for PMs.md` as the pick-your-tool index
+- `docs/Using PM Skills with Slash Commands 101.md` for Claude `/slash` workflows like `/pm-story` and `/pm-prd`
+- New PM-friendly platform docs for Claude Code, Claude Desktop, Claude Cowork, ChatGPT Desktop, OpenClaw, n8n, LangFlow, and Python agents
+- Updated `START_HERE.md` with comfort-level paths (chat-first, terminal-first, automation-first)
+
+How to make the best use of this release:
+1. Start with [`docs/Using PM Skills 101.md`](docs/Using%20PM%20Skills%20101.md)
+2. Choose your platform in [`docs/Platform Guides for PMs.md`](docs/Platform%20Guides%20for%20PMs.md)
+3. Run one real task with one skill before scaling to multi-skill workflows
+
+Release note: [`docs/announcements/2026-03-08-v0-65-onboarding-integration-guides.md`](docs/announcements/2026-03-08-v0-65-onboarding-integration-guides.md)
+
+---
 
 ### Mar 6, 2026 — v0.6 Navigation + Commands
 
@@ -482,9 +502,18 @@ Use GitHub app connections (formerly connectors), Custom GPT Knowledge uploads, 
 
 ## 📄 Docs
 
+- **[Using PM Skills 101](docs/Using%20PM%20Skills%20101.md)** — Beginner-friendly orientation for PMs who want clear setup without technical overload.
 - **[Using PM Skills with Claude](docs/Using%20PM%20Skills%20with%20Claude.md)** — Claude Code usage plus GitHub ZIP upload steps for Claude Desktop/Web.
 - **[Using PM Skills with Codex](docs/Using%20PM%20Skills%20with%20Codex.md)** — Local workspace usage plus GitHub-connected Codex on ChatGPT.
 - **[Using PM Skills with ChatGPT](docs/Using%20PM%20Skills%20with%20ChatGPT.md)** — GitHub app connection, Custom GPT Knowledge setup, and Project-based usage.
+- **[Platform Guides for PMs](docs/Platform%20Guides%20for%20PMs.md)** — Tool-by-tool setup chooser for Claude Code, Codex, OpenClaw, Cowork, Claude Desktop, ChatGPT Desktop, n8n, LangFlow, and Python agents.
+- **[Using PM Skills with Claude Code](docs/Using%20PM%20Skills%20with%20Claude%20Code.md)** — PM-focused quickstart for Claude Code users.
+- **[Using PM Skills with Slash Commands 101](docs/Using%20PM%20Skills%20with%20Slash%20Commands%20101.md)** — Turn PM skills into reusable Claude slash commands like `/pm-story` and `/pm-prd`.
+- **[Using PM Skills with Claude Desktop](docs/Using%20PM%20Skills%20with%20Claude%20Desktop.md)** — Skill upload workflow for non-technical desktop users.
+- **[Using PM Skills with ChatGPT Desktop](docs/Using%20PM%20Skills%20with%20ChatGPT%20Desktop.md)** — Project-first setup for desktop-based PM work.
+- **[Using PM Skills with n8n](docs/Using%20PM%20Skills%20with%20n8n.md)** — Practical automation patterns for repeatable PM workflows.
+- **[Using PM Skills with LangFlow](docs/Using%20PM%20Skills%20with%20LangFlow.md)** — Visual workflow setup using skill-guided prompt templates.
+- **Additional harness guides:** [Cursor](docs/Using%20PM%20Skills%20with%20Cursor.md), [Windsurf](docs/Using%20PM%20Skills%20with%20Windsurf.md), [Bolt](docs/Using%20PM%20Skills%20with%20Bolt.md), [Replit Agent](docs/Using%20PM%20Skills%20with%20Replit%20Agent.md), [Make.com](docs/Using%20PM%20Skills%20with%20Make.com.md), [Devin](docs/Using%20PM%20Skills%20with%20Devin.md), [CrewAI](docs/Using%20PM%20Skills%20with%20CrewAI.md), [Gemini](docs/Using%20PM%20Skills%20with%20Gemini.md)
 - **[Start Here](START_HERE.md)** — One-page "do this now" onboarding for skills and commands.
 - **[Commands](commands/README.md)** — Command format, command list, validation, and discovery.
 - **[Catalog Artifacts](catalog/README.md)** — Generated skill/command indexes for fast navigation.
@@ -641,6 +670,15 @@ See [LICENSE](LICENSE) for full details.
 - **Productside:** [Learn more about AI PM consulting](https://productside.com)
 
 ---
+
+**v0.65 — March 8, 2026**
+
+Highlights in this release:
+- Added comprehensive PM-first onboarding and setup guide: `docs/Using PM Skills 101.md`
+- Added platform chooser: `docs/Platform Guides for PMs.md`
+- Added slash-command playbook: `docs/Using PM Skills with Slash Commands 101.md`
+- Added and linked practical platform docs for Claude Code/Desktop/Cowork, ChatGPT Desktop, OpenClaw, n8n, LangFlow, and Python agents
+- Updated `START_HERE.md` and docs navigation so new users can pick the right setup path faster
 
 **v0.6 — March 6, 2026**
 
