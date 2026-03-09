@@ -239,6 +239,9 @@ Some skills include a `scripts/` folder with deterministic helpers for calculati
 - `scripts/zip-a-skill.sh` - Build upload-ready `.zip` files by skill, type, or all skills.
 - `scripts/generate-catalog.py` - Regenerate skill/command navigation indexes.
 
+**New to terminals?** See [`scripts/README.md`](scripts/README.md) for a plain-language walkthrough.
+**Power users:** These scripts are designed to chain together into fast end-to-end workflows (idea -> prompt -> validation -> packaging).
+
 **What it does:**
 1. Analyzes your content and suggests skill types
 2. Generates complete skill files with examples
